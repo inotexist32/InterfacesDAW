@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script>
+        function switchStat(id){
+            var selected=false;
+            var pieza = document.getElementsByClassName("pieza-"+id);
+            Array.from(pieza).classList.forEach(element => {
+                if(element=="selected")
+                    selected = true;
+            });
+        
+            if(selected){
+                element.classList.remove("selected");
+            }else{
+                element.classList.add("selected");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="puzzle">
+        <div class="puzzle-top">
+            <div class="pieza pieza-1" onclick="switchStat(1)"></div>
+            <div class="pieza pieza-2" onclick="switchStat(2)"></div>
+        </div>
+        <div class="puzzle-bottom">
+            <div class="pieza pieza-3" onclick="switchStat(3)"></div>
+            <div class="pieza pieza-4" onclick="switchStat(4)"></div>
+        </div>
+    </div>
+</body>
+
+</html>

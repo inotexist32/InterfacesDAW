@@ -1,0 +1,86 @@
+*{
+    margin:0px;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card-front {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    width: 200px;
+    height: 290px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: rotateY(180deg);
+    transition: transform 1s;
+}
+
+.card-back {
+    background-image: url(../assets/img/reverso.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    width: 200px;
+    height: 290px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: transform 1s, opacity 0s 0.30s;
+    opacity: 1;
+}
+
+.card{
+    width: 200px;
+    height: 290px;
+    position:relative;
+}
+
+.card-selected .card-front{
+    transform: rotateY(360deg);
+}
+.card-selected .card-back{
+    transform: rotateY(180deg);
+    opacity: 0;
+}
+.card-deleted .card-front{
+    transform: rotateY(0deg);
+}
+.card-deleted .card-back{
+    transform: rotateY(180deg);
+    opacity: 0;
+}
+.tablero{
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    height: fit-content;
+    transition: 1s;
+}
+.tablero-terminado{
+    transform: rotateX(360deg);
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mark{
+    color: rgb(211, 211, 211);
+    position: absolute;
+    bottom: 2px;
+    right: 97px;
+    font-size: 7px;
+    
+}
+#actual-score{
+    margin:20px;
+}
+#best-score{
+    margin:20px;
+}

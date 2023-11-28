@@ -1,0 +1,161 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.venecia {
+    background-image: url(../assets/img/puente-venecia.png);
+    background-size: 100% 100%;
+    width: 700px;
+    height: 800px;
+    position: relative;
+    overflow: hidden;
+}
+
+.venecia-top {
+    background-image: url(../assets/img/puente-venecia-top.png);
+    background-size: 100% 100%;
+    width: 700px;
+    height: 800px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+
+}
+
+.sombra {
+    background: rgb(69, 71, 69);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    width: 400px;
+    height: 800px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 9;
+
+}
+
+.gondola {
+    background-image: url(../assets/img/gondola.png);
+    background-size: 100% 100%;
+    width: 250px;
+    height: 150px;
+    position: relative;
+    top: 550px;
+    left: 200px;
+    z-index: 4;
+    animation: navegar 50s infinite;
+}
+
+.remo {
+    background-image: url(../assets/img/remo.png);
+    background-size: 100% 100%;
+    width: 250px;
+    height: 10px;
+    position: absolute;
+    top: 50px;
+    left: -50px;
+    transform: rotateZ(-45deg);
+    z-index: 5;
+    animation: remar 5s infinite;
+}
+
+.brazo {
+    background-image: url(../assets/img/gondola-brazo.png);
+    background-size: 100% 100%;
+    width: 250px;
+    height: 150px;
+    position: absolute;
+    z-index: 6;
+}
+
+@keyframes remar {
+    0% {
+        top: 50px;
+        left: -40px;
+        transform: rotateZ(-90deg);
+    }
+
+    50% {
+        top: 40px;
+        left: -40px;
+        transform: rotateZ(-45deg);
+    }
+
+    60% {
+        top: 40px;
+        left: -40px;
+    }
+
+    90% {
+        top: 30px;
+    }
+
+    100% {
+        left: -35px;
+        transform: rotateZ(-90deg);
+    }
+
+}
+
+
+@keyframes navegar {
+    0% {
+        transform: rotateY(0deg) rotateZ(0deg);
+        top: 550px;
+        left: -200px;
+    }
+
+    10% {
+        top: 570px;
+        left: -140px;
+    }
+
+    20% {
+        top: 590px;
+        left: 0px;
+    }
+
+    30% {
+        top: 610px;
+        left: 140px;
+    }
+
+    40% {
+        top: 630px;
+        left: 300px;
+    }
+
+    50% {
+        top: 650px;
+        left: 500px;
+        transform: rotateY(0deg);
+
+    }
+    60%{
+        transform: rotateY(180deg) rotateZ(-10deg);
+        top: 650px;
+        left: 650px;
+    }
+    70%{
+        top: 600px;
+        left: 300px;     
+    }
+    80%{
+        top: 610px;
+        left: 200px;     
+    }
+
+    100% {
+        top: 550px;
+        left: -200px;
+        transform: rotateY(180deg) rotateZ(-10deg);
+
+    }
+
+}

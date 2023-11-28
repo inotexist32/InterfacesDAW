@@ -1,0 +1,156 @@
+.pocion {
+    background-image: url(../assets/img/matraz.png);
+    width: 301px;
+    height: 433px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 350px;
+    left: 200px;
+}
+
+.contenido {
+    background-image: url(../assets/img/contenido-matraz.png);
+    width: 301px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    transform: rotateZ(180deg);
+    bottom: -334px;
+    z-index: -1;
+    animation: 10s llenar;
+    animation-fill-mode: forwards;
+}
+
+.jarra {
+    position: relative;
+    background-image: url(../assets/img/jarra.png);
+    width: 400px;
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: -350px;
+    left: 170px;
+    animation: girar 10s;
+    animation-fill-mode: forwards;
+}
+
+.contenedor {
+    height: 433px;
+    width: 301px;
+    position: relative;
+    top: -400px;
+}
+
+.chorro {
+    background-color: #ac0fcc;
+    width: 20px;
+    position: relative;
+    height: 500px;
+    bottom: 900px;
+    left: 165px;
+    z-index: -2;
+    animation: chorro 10s linear;
+    animation-fill-mode: forwards;
+    border-radius: 50px 50px 0px 0px;
+}
+
+@keyframes llenar {
+    0% {
+        bottom: -433px;
+        height: 0px;
+    }
+
+    20% {
+        bottom: -433px;
+        height: 0px;
+    }
+
+    95% {
+        bottom: -60px;
+        height: 373px;
+    }
+
+    100% {
+        bottom: -60px;
+        height: 373px;
+    }
+}
+
+@keyframes girar {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    10% {
+        transform: rotateZ(0deg);
+    }
+
+    50% {
+        transform: rotateZ(-45deg);
+    }
+
+    100% {
+        transform: rotateZ(0deg);
+    }
+}
+
+@keyframes chorro {
+    0% {
+        opacity: 0;
+        width: 0px;
+        height: 0px;
+    }
+
+    19% {
+        opacity: 1;
+        height: 0px;
+    }
+
+    21% {
+        height: 500px;
+        bottom: 1000px;
+        left: 165px;
+    }
+
+    30% {
+        bottom: 930px;
+        left: 165px;
+        height: 500px;
+    }
+
+    50% {
+        bottom: 900px;
+        left: 165px;
+        width: 30px;
+        height: 500px;
+    }
+
+    80% {
+        bottom: 1050px;
+        left: 165px;
+        height: 500px;
+    }
+
+    90% {
+        bottom: 1050px;
+        height: 500px;
+    }
+
+    95% {
+        bottom: 500px;
+        left: 175px;
+        height: 0px;
+        width: 0px;
+
+    }
+
+    100% {
+        bottom: 500px;
+        left: 175px;
+        left: 190px;
+        height: 0px;
+        width: 0px;
+    }
+}

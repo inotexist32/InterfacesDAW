@@ -1,0 +1,69 @@
+.puzzle{
+    background-color: black;
+    width: 410px;
+    height: 410px;
+}
+.puzzle-top{
+    display: flex;
+    flex-direction: row;
+}.puzzle-bottom{
+    display: flex;
+    flex-direction: row;
+}
+.pieza{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+.pieza:hover{
+    opacity: 1;
+    
+}
+.selected{
+    opacity: 1;
+}
+.pieza-1{
+    position:absolute;
+    top:20px;
+    left:20px;
+    width: 251px;
+    height: 184px;
+    background-image: url(../assets/img/pieza-2.png);
+}
+.pieza-1:hover{
+}
+.pieza-2{
+    position:absolute;
+    top:20px;
+    left:215px;
+    background-image: url(../assets/img/pieza-1.png);
+    width: 187px;
+    height: 248px;
+}
+.pieza-2:hover{
+}
+.pieza-3{
+    position:absolute;
+    top:155px;
+    left:20px;
+    background-image: url(../assets/img/pieza-4.png);
+    width: 187px;
+    height: 248px;
+}
+.pieza-3:hover{
+}
+.pieza-4{
+    position:absolute;
+    top:213px;
+    left:157px;
+    background-image: url(../assets/img/pieza-3.png);
+    width: 246px;
+    height: 191px;
+}
+.pieza-4:hover{
+}
