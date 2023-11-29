@@ -1,0 +1,318 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: #fafafa;
+    min-width: 400px;
+}
+
+div.header-content {
+    border-bottom: solid rgb(218, 218, 218) 1px;
+    margin: auto;
+    padding: 20px;
+}
+
+content {
+    border: solid rgb(218, 218, 218) 1px;
+    border-radius: 2px;
+    max-width: 950px;
+    height: 700px;
+    margin: 50px auto auto auto;
+    display: block;
+
+}
+
+div.logo-section {
+    float: left;
+    width: 45%;
+}
+
+div.logo-image {
+    background-image: url(../assets/images/logo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 200px;
+    height: 50px;
+    margin: auto;
+}
+
+div.search-box {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+}
+
+input.search-box-input {
+    padding: 5px;
+    text-align: center;
+    border: solid rgb(218, 218, 218) 1px;
+    border-radius: 2px;
+    background-color: #fafafa;
+    width: 200px;
+}
+
+div.photo-body {
+    width: 60%;
+    height: 100%;
+    float: left;
+}
+
+div.photo {
+    background-image: url(../assets/images/rosalia.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+div.photo-info {
+    float: left;
+    width: 40%;
+    height: 700px;
+}
+
+div.photo-author {
+    float: left;
+    border-bottom: solid rgb(218, 218, 218) 1px;
+    margin: 0px;
+    padding: 10px;
+    width: 95%;
+}
+
+div.author-logo {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+img.author-logo {
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+div.author-data {
+    float: left;
+    padding: 10px;
+}
+
+div.author-name {
+    float: left;
+    font-weight: 600;
+}
+
+span.author-name {
+    font-weight: 600;
+}
+
+.comment-body {
+    margin-left: 70px;
+    margin-top: 8px;
+}
+
+div.author-verificated {
+    float: left;
+    background-image: url(../assets/images/verified-check.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 13px;
+    height: 13px;
+    margin: 5px;
+}
+
+img.author-verificated {
+    width: 13px;
+    margin: 0px 5px 0px 5px;
+}
+
+div.follow-button {
+    color: #3f97f0;
+    float: left;
+    cursor: pointer;
+}
+
+div.rosalia-profile {
+    background-image: url(../assets/images/rosalia-profile.png);
+}
+
+div.other-profile {
+    background-image: url(../assets/images/other-profile.png);
+}
+
+div.photo-location {
+    clear: both;
+    font-size: small;
+}
+
+
+div.comment {
+    float: left;
+    margin: 0px;
+    padding: 10px;
+
+}
+
+span.login-link {
+    color: #284e74;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+footer {
+    border-top: solid rgb(218, 218, 218) 1px;
+    width: 100%;
+    min-height: 200px;
+    margin: 100px auto auto auto;
+}
+
+.info-bottom {
+    position: absolute;
+    float: left;
+    width: 380px;
+    bottom: 220px;
+}
+
+.action-panel {
+
+    padding: 20px;
+    border-top: solid rgb(218, 218, 218) 1px;
+
+}
+
+.action-button {
+    float: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.action-button-right {
+    position: absolute;
+    right: 0px;
+}
+
+.like-button {
+    background-image: url(../assets/images/like-button.png);
+}
+
+.comment-button {
+    background-image: url(../assets/images/comment-button.png);
+}
+
+.share-button {
+    background-image: url(../assets/images/share-button.png);
+}
+
+.save-button {
+    background-image: url(../assets/images/save-button.png);
+}
+
+.ammount-likes {
+    margin-bottom: 10px;
+    font-weight: 600;
+    clear: both;
+}
+
+.date {
+    color: #999;
+}
+
+.login-panel {
+    color: #999;
+    border-top: solid rgb(218, 218, 218) 1px;
+    padding: 20px;
+}
+
+.comment-time-ago {
+    color: #999;
+}
+
+.add-comment-button {
+    background-image: url(../assets/images/add-comment-button.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    clear: both;
+    margin: auto;
+
+}
+@media (max-width:500px) {
+    div.photo-body {
+        margin-top: 30px;
+        width: 100%;
+        height: fit-content;
+        float: left;
+    }
+
+    .photo-author {
+        position: absolute;
+        top: 140px;
+    }
+
+    .info-bottom {
+        position: relative;
+        float: left;
+        width: 380px;
+        bottom: inherit;
+    }
+
+    div.info-bottom {
+        width: 100%;
+    }
+
+    div.logo-section {
+        width: inherit;
+        text-align: center;
+        float: none;
+    }
+
+    .search-box {
+        width: 100%;
+        text-align: center;
+    }
+
+    input.search-box-input {
+        width: 300px;
+        clear: both;
+    }
+
+    content {
+        border: none;
+    }
+    div.photo{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+    }
+    div.photo-info {
+        width: inherit;
+    }
+
+    footer {
+        clear: both;
+    }
+}

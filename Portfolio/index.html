@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="d-block d-sm-flex">
+        <div class="main-photo"></div>
+        <div class="main-info header-text ms-5">
+            <h1>Mr Bean</h1>
+            <h2>A Frontend Developer's Portfolio</h2>
+        </div>
+        <div class="header-bottom-border"></div>
+    </header>
+    <div class="separador"></div>
+    <nav class="navbar navbar-expand">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <p class="nav-link" onclick="setProject(0)">Proyecto1</p>
+                <div class="nav-shadow-selected"></div>
+            </li>
+            <li class="nav-item">
+                <p class="nav-link" onclick="setProject(1)">Proyecto2</p>
+            </li>
+            <li class="nav-item">
+                <p class="nav-link" onclick="setProject(2)">Proyecto3</p>
+            </li>
+        </ul>
+    </nav>
+    <content id="content" class="body row d-flex justify-content-center container-fluid">
+        <div class="active-entry entry-project-0 col-lg-10 col-sm-12 d-flex flex-row">
+            <div class="project-side-bar me-5 d-none d-sm-none d-md-block">
+                <div class="image-entry image-project-0"></div>
+            </div>
+            <div class="project-body-description">
+                <h1 class="header-text">Proyecto1</h1>
+                <p class="project-description-0 header-text fs-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed euismod, sapien non varius tincidunt, elit ipsum dictum libero, eu imperdiet odio nulla eu est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus vel justo nec ligula cursus laoreet. Integer auctor leo eu quam tincidunt, id fringilla eros pellentesque. Vivamus eu diam id tellus auctor vulputate.</p>
+            </div>
+        </div>
+    </content>
+    <div class="separador"></div>
+
+    <footer>
+        <div class="header-top-border"></div>
+        <div class="main-info header-text ms-5">
+            <h1>Contáctame</h1>
+            <h2>666 555 4444</h2>
+            <h2>mrbean@hotmail.com</h2>
+        </div>
+        <div class="header-bottom-border"></div>
+    </footer>
+</body>
+<script src="scripts/script.js"></script>
+
+</html>
