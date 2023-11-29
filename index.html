@@ -22,6 +22,9 @@
             <tr>
                 <td>1</td>
                 <td>Mockups youtube</td>
+                <td>
+                    <div class="w-100 h-100" id="status1"></div>
+                </td>
                 <td class="text-center">
                     <a class="btn btn-primary">Figma</a>
                 </td>
@@ -281,11 +284,14 @@
                 old = 0;
         }
         localStorage.setItem("status" + id, old);
+        paintStatus();
     }
     function paintStatus() {
         states = ["Sin empezar", "Empezado", "Avanzado", "A punto de terminar", "Terminado"]
         for (let i = 1; i < 23; i++) {
             const element = document.getElementById("status" + i);
+            if (!element)
+                continue;
             let status = localStorage.getItem("status" + i);
             if (!status)
                 status = 0;
