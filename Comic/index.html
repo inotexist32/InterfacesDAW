@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script>
+        function switchStat(id) {
+            var selected = false;
+            var piezas = document.getElementsByClassName("pieza-" + id);
+
+            for (var i = 0; i < piezas.length; i++) {
+                if (piezas[i].classList.contains("selected")) {
+                    selected = true;
+                    piezas[i].classList.remove("selected");
+                } else {
+                    selected = false;
+
+                    var piezasDeseleccionar = document.getElementsByClassName("pieza");
+                    for (var j = 0; j < piezasDeseleccionar.length; j++) {
+                        if (piezasDeseleccionar[j].classList.contains("selected"))
+                            piezasDeseleccionar[j].classList.remove("selected");
+                    }
+                    piezas[i].classList.add("selected");
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="puzzle">
+        <div class="puzzle-top">
+            <div class="pieza pieza-1" onclick="switchStat(1)"></div>
+            <div class="pieza pieza-2" onclick="switchStat(2)"></div>
+            <div class="pieza pieza-3" onclick="switchStat(3)"></div>
+        </div>
+        <div class="puzzle-bottom">
+            <div class="pieza pieza-4" onclick="switchStat(4)"></div>
+            <div class="piezas-6-7">
+                <div class="pieza pieza-5" onclick="switchStat(5)"></div>
+                <div class="pieza pieza-6" onclick="switchStat(6)"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
