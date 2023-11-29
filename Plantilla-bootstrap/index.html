@@ -5,87 +5,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style/bootstrap-5.3.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
-    <div class="wrapper row1">
-        <header id="header" class="clear">
-            <div id="hgroup">
-                <h1><a href="#">Plantilla</a></h1>
-                <h2>Reproduce esta plantilla</h2>
+    <header class="p-3">
+        <h1>Título</h1>
+    </header>
+    <div class="col-12 ps-5 sidebar d-flex d-sm-flex d-md-none">
+        <nav>
+            <h2>Sidebar</h2>
+            <ul class="list-unstyled w-100">
+                <li>Enlace1</li>
+                <li>Enlace2</li>
+                <li>Enlace3</li>
+                <li>Enlace4</li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container d-flex justify-content-center me-0">
+        <div class="col-12 col-sm-12 col-md-9 m-3">
+            <div class="row mb-md-5">
+                <div class="col-md-4 mb-sm-2 mb-2 mb-md-0">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">Articulo1</h2>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-sm-2 mb-2 mb-md-0">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">Articulo2</h2>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-sm-2 mb-2 mb-md-0">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">Articulo3</h2>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <div class="row">
+                <div class="col-md-4 mb-sm-2 mb-2 mb-md-0">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">Articulo4</h2>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 ps-5 sidebar d-none d-sm-none d-md-block">
             <nav>
+                <h2>Sidebar</h2>
                 <ul>
-                    <li><a href="#">Text Link</a></li>
-                    <li><a href="#">Text Link</a></li>
-                    <li><a href="#">Text Link</a></li>
-                    <li><a href="#">Text Link</a></li>
-                    <li class="last"><a href="#">Text Link</a></li>
+                    <li>Enlace1</li>
+                    <li>Enlace2</li>
+                    <li>Enlace3</li>
+                    <li>Enlace4</li>
                 </ul>
             </nav>
-        </header>
+        </div>
     </div>
-    <!-- content -->
-    <div class="wrapper row2">
-        <div id="container" class="clear">
-            <!-- Slider -->
-            <section id="slider"><a href="#"><img src="./examples/ud1/ex3/img/960x360.gif" alt=""></a></section>
-            <!-- main content -->
-            <div id="homepage">
-                <!-- Services -->
-                <section id="services" class="clear">
-                    <article class="one_third">
-                        <figure><img src="./examples/ud1/ex3/img/290x180.gif" width="290" height="180" alt="">
-                            <figcaption>
-                                <h2>Indonectetus facilis</h2>
-                                <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
-                                <footer class="more"><a href="#">Read More &raquo;</a></footer>
-                            </figcaption>
-                        </figure>
-                    </article>
-                    <article class="one_third">
-                        <figure><img src="./examples/ud1/ex3/img/290x180.gif" width="290" height="180" alt="">
-                            <figcaption>
-                                <h2>Indonectetus facilis</h2>
-                                <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
-                                <footer class="more"><a href="#">Read More &raquo;</a></footer>
-                            </figcaption>
-                        </figure>
-                    </article>
-                    <article class="one_third lastbox">
-                        <figure><img src="./examples/ud1/ex3/img/290x180.gif" width="290" height="180" alt="">
-                            <figcaption>
-                                <h2>Indonectetus facilis</h2>
-                                <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
-                                <footer class="more"><a href="#">Read More &raquo;</a></footer>
-                            </figcaption>
-                        </figure>
-                    </article>
-                </section>
-                <!-- / Services -->
-                <!-- ########################################################################################## -->
-                <!-- ########################################################################################## -->
-                <!-- ########################################################################################## -->
-                <!-- ########################################################################################## -->
-                <!-- Introduction -->
-
-                <!-- / Introduction -->
+    <footer class="p-2">
+        <div class="row mb-md-5">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Col1</h2>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
             </div>
-            <!-- / content body -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Col2</h2>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Col3</h2>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <!-- Footer -->
-    <div class="wrapper row3">
-        <div id="footer" class="clear">
-        </div>
-    </div>
-    <!-- Copyright -->
-    <div class="wrapper row4">
-        <footer id="copyright" class="clear">
-            <p class="fl_left">Diseño de Interfaces Web <a href="#">IES Comercio</a></p>
-        </footer>
-    </div>
+    </footer>
 </body>
 
 </html>
