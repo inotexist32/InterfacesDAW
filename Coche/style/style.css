@@ -1,0 +1,172 @@
+body{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fondo{
+    background-image: url(../assets/img/background.jpg);
+    background-size: 100% 100%;
+    width: 1000px;
+    height: 700px;
+    position: relative;
+}
+.coche {
+    background-image: url(../assets/img/coche.webp);
+    background-size: 100% 100%;
+    width: 250px;
+    height: 100px;
+    position:relative;
+    left: 0px;
+    top:100px;
+    transform: rotateY(180deg);
+    animation: accidente 5s infinite linear;
+}
+.coche:hover .patan-serio{
+    display: none;
+}
+.coche:hover .patan-descojonandose{
+    display: block;
+}
+
+.patan-serio {
+    background-image: url(../assets/img/patan-serio.webp);
+    width: 250px;
+    height: 100px;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.patan-descojonandose {
+    background-image: url(../assets/img/patan-descojonandose.webp);
+    width: 250px;
+    height: 100px;
+    background-size: 100% 100%;
+    position: relative;
+    display: none;
+
+}
+
+.patan-descojonandose-cabeza {
+    background-image: url(../assets/img/patan-descojonandose-cabeza.webp);
+    width: 250px;
+    height: 100px;
+    background-size: 100% 100%;
+    position: relative;
+    animation: reirse 0.2s infinite;
+
+}
+.destello{
+    background-image: url(../assets/img/destello.png);
+    width: 100px;
+    height: 100px;
+    background-size: 100% 100%;
+    position:relative;
+    left:170px;
+    top:-200px;
+    animation: destello 5s infinite;
+}
+
+.hulk {
+    background-image: url(../assets/img/hulk.webp);
+    width: 125px;
+    height: 115px;
+    background-size: 100% 100%;
+    position:relative;
+    left: 600px;
+    top:400px;
+    z-index: 2;
+}
+
+.hulk-brazo {
+    background-image: url(../assets/img/hulk-brazo.webp);
+    width: 125px;
+    height: 115px;
+    background-size: 100% 100%;
+    position: relative;
+    animation: zurrar 5s infinite;
+    z-index: -1;
+}
+@keyframes reirse {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(2px);
+    }
+}
+
+@keyframes zurrar{
+    0%{
+        transform: rotateZ(0deg);
+        left: 0px;
+        top: 0px;
+    }
+    39%{
+        transform: rotateZ(0deg);
+        left: 0px;
+        top: 0px;
+    }
+    40%{
+        transform: rotateZ(60deg);
+        left: -22px;
+        top: -10px;
+    }
+    100%{
+        transform: rotateZ(60deg);
+        left: -22px;
+        top: -10px;
+    }
+}
+@keyframes accidente{
+    0%{
+        left: 0px;
+        top:500px;
+        transform: rotateZ(0deg) rotateY(180deg);
+        
+    }
+    40%{
+        left: 390px;
+        top:500px;
+        transform: rotateZ(0deg) rotateY(180deg);
+    }
+    80%{
+        transform: rotateZ(-1000deg) rotateY(180deg) scale(0);
+        left:100px;
+        top:10px;
+        opacity: 1;
+
+    }
+    81%{
+        transform: rotateZ(-1000deg) rotateY(180deg) scale(0);
+        left:100px;
+        top:10px;
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+        transform: rotateZ(0deg) rotateY(180deg);
+        left:-500px;
+        top:500px;
+    }
+}
+@keyframes destello{
+    0%{
+        transform: scale(0);
+    }
+    75%{
+        transform:  scale(0);
+    }
+    81%{
+        transform: scale(0);
+    }
+    89%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}

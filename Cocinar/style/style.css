@@ -1,0 +1,63 @@
+.ramen{
+    position: absolute;
+    left:50px;
+    top:-200px;
+    background-image: url(../assets/img/ramen_crudo.png);
+    width:300px;
+    height:300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 10;
+}
+.smoke{
+    position: absolute;
+    left:15px;
+    top:-320px;
+    background-image: url(../assets/img/smoke.gif);
+    background-size: 100% 100%;
+    background-position: center;
+    width:300px;
+    height:300px;
+    opacity: 0;
+    
+}
+
+.ramen-quemado{
+    position: absolute;
+    left:50px;
+    top:-200px;
+    background-image: url(../assets/img/ramen_quemado.png);
+    width:300px;
+    height:300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2;
+}
+.fuego{
+    position: absolute;
+    top:200px;
+    background-image: url(../assets/img/fuego_apagado.png);
+    width:300px;
+    height:300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.fuego:hover{
+    background-image: url(../assets/img/fuego_encendido.png);
+}
+.fuego:hover .ramen{
+    background-image: url(../assets/img/ramen_cocinado.png);
+    opacity: 0;
+    transition: background-image 10s, opacity 10s 10s;
+}
+.fuego:hover .smoke{
+    opacity: 1;
+    background-image: url(../assets/img/dark-smoke.gif);
+    background-size: 240% 240%;
+    transition: opacity 5s 5s, background 8s 12s;
+
+}

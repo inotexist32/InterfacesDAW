@@ -1,0 +1,47 @@
+*{
+    margin:0px;
+}
+.frente {
+    background-image: url(../assets/img/magic-frente.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    width: 200px;
+    height: 290px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: rotateY(180deg);
+}
+
+.reverso {
+    background-image: url(../assets/img/magic-reverso.webp);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    width: 200px;
+    height: 290px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: opacity 0s 0.15s;
+}
+
+.carta-container:hover .carta {
+    transform: rotateY(180deg);
+}
+.carta-container:hover .carta .reverso{
+    opacity: 0;
+}
+.carta{
+    width: 200px;
+    height: 290px;
+    transition: transform 0.5s;
+}
+.carta-container{
+    position:relative;
+    width: 200px;
+    height: 290px;
+    float:left;
+    margin:20px;
+}

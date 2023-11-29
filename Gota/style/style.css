@@ -1,0 +1,89 @@
+@keyframes gota {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(100);
+        opacity: 1;
+    }
+}
+
+@keyframes gota1 {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+
+    10% {
+        transform: scale(1);
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(100);
+        opacity: 1;
+    }
+}
+
+@keyframes gota2 {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(100);
+        opacity: 1;
+    }
+}
+
+
+.water {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/img/water.gif);
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wave {
+    border-radius: 1000px;
+    border: solid rgb(255, 255, 255, 0.3) 1px;
+    animation: gota 10s infinite;
+    width: 100px;
+    height: 100px;
+    position:absolute;
+    left: 50%;
+    bottom: 50%;
+
+}
+.w0 {
+    animation: gota 10s infinite;
+}
+.w1 {
+    animation: gota1 10s infinite;
+}
+.w2 {
+    animation: gota2 10s infinite;
+}

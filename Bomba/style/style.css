@@ -1,0 +1,83 @@
+body {}
+
+.background {
+    background-image: url(../assets/img/background.jpg);
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.bomb {
+    background-image: url(../assets/img/misil-coyote-dirigido.png);
+    width: 5%;
+    height: 15%;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 5%;
+    left: 55%;
+    animation: falling-bomb 5s infinite ease-in;
+    transform: rotateZ(-90deg);
+}
+
+@keyframes falling-bomb {
+    0% {
+        height: 15%;
+        width: 5%;
+    }
+
+    5% {
+        transform: rotateZ(0deg);
+    }
+
+    10% {
+        height: 35%;
+        top: 5%;
+    }
+
+    25% {
+        height: 35%;
+    }
+
+    30% {
+        top: 90%;
+        height: 5%;
+        background-image: url(../assets/img/misil-coyote-dirigido.png);
+    }
+
+    31% {
+        background-image: url(../assets/img/hongo-atomico.png);
+        transform: scale(1);
+
+    }
+
+    50% {
+        background-image: url(../assets/img/hongo-atomico.png);
+        transform: rotateZ(0deg);
+        top: 55%;
+        transform: scaleY(15);
+
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    85% {
+        opacity: 0;
+
+    }
+
+    100% {
+        opacity: 0;
+        height: 5%;
+        background-image: url(../assets/img/hongo-atomico.png);
+        transform: rotateZ(0deg);
+        top: 55%;
+        transform: scaleX(15) scaleY(3);
+    }
+
+
+}
