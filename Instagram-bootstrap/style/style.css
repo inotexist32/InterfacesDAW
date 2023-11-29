@@ -22,6 +22,9 @@ div.author-logo {
 div.rosalia-profile {
     background-image: url(../assets/images/rosalia-profile.png);
 }
+div.other-profile {
+    background-image: url(../assets/images/other-profile.png);
+}
 div.author-verificated {
     background-image: url(../assets/images/verified-check.png);
     background-size: cover;
@@ -30,28 +33,54 @@ div.author-verificated {
     width: 13px;
     height: 13px;
 }
-
 img.author-verificated {
     width: 13px;
     margin: 0px 5px 0px 5px;
+}
+img.add-comment-button-image {
+    width: 30px;
+}
+.like-button {
+    background-image: url(../assets/images/like-button.png);
+}
+
+.comment-button {
+    background-image: url(../assets/images/comment-button.png);
+}
+
+.share-button {
+    background-image: url(../assets/images/share-button.png);
+}
+
+.save-button {
+    background-image: url(../assets/images/save-button.png);
+}
+.action-button {
+    float: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
 }
 /************************************************/
 
 /* Colores de fuente */
 /************************************************/
-div.follow-button {
+.follow-button{
     color: #3f97f0;
-    float: left;
     cursor: pointer;
+}
+.login-link{
+    color: #2d639a;
+    cursor: pointer;
+}
+.f-grey{
+    color:#828282;
 }
 /************************************************/
 
-/* Correcciones de desbordamientos */
-/************************************************/
-header{
-    overflow: hidden;
-}
-/************************************************/
 
 /* Colores de background de los elementos */
 /************************************************/
@@ -77,5 +106,22 @@ div.center-box-left{
 }
 div.center-box-right{
     border-left:none;
+}
+div.info-bottom{
+    border-top: solid rgb(218, 218, 218) 1px;
+}
+div.login-panel{
+    border-top: solid rgb(218, 218, 218) 1px;
+}
+header{
+    overflow: hidden;
+}
+/************************************************/
+
+
+/* Tamaños de texto*/
+/************************************************/
+.date{
+    font-size: 12px;
 }
 /************************************************/
