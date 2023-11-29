@@ -105,10 +105,14 @@
                 <td>8</td>
                 <td>Portfolio</td>
                 <td>
-                    <div class="w-100 h-100" id="status8" status="Terminado"></div>
+                    <div class="w-100 h-100" id="status8"></div>
                 </td>
                 <td class="text-center">
-                    <a class="btn btn-primary">Figma</a>
+                    <a class="btn btn-primary"
+                        href="https://github.com/inotexist32/InterfacesDAW/tree/main/Portfolio">Código</a>
+                    <a class="btn btn-warning" href="Portfolio">Vista</a>
+                    <a class="btn btn-warning" href="Portfolio/mockup.pdf">Mockup</a>
+                    <a class="btn btn-warning" href="Portfolio/estilos.pdf">Guia de estilos</a>
                 </td>
             </tr>
             <tr>
@@ -120,8 +124,8 @@
                 <td class="text-center">
                     <a class="btn btn-primary"
                         href="https://github.com/inotexist32/InterfacesDAW/tree/main/Curriculum-lorem">Código</a>
-                        <a class="btn btn-warning" href="Curriculum-lorem">Vista</a>
-                        <a class="btn btn-warning" href="Curriculum-lorem/mockup.pdf">Mockup</a>
+                    <a class="btn btn-warning" href="Curriculum-lorem">Vista</a>
+                    <a class="btn btn-warning" href="Curriculum-lorem/mockup.pdf">Mockup</a>
                 </td>
             </tr>
             <tr>
@@ -281,7 +285,7 @@
             let status = localStorage.getItem("status" + i);
             if (!status)
                 status = 0;
-            if (element.getAttribute("status")){
+            if (element.getAttribute("status")) {
                 element.innerText = states[4];
                 element.style.backgroundColor = "#9cffb1";
             }
