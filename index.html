@@ -297,12 +297,19 @@
                 status = 0;
             element.innerText = states[status];
             if (status == 4) {
-                element.style.backgroundColor = "green";
+                element.style.backgroundColor = "#9cffb1";
             }
         }
     }
     document.addEventListener("DOMContentLoaded", function () {
         paintStatus();
+
+        for (let i = 1; i < 23; i++) {
+            const element = document.getElementById("status" + i);
+            element.onclick = () => {
+                changeStatus(i);
+            }
+        }
     });
 </script>
 
