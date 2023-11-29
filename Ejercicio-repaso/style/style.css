@@ -87,23 +87,31 @@ h2 {
 
 #site_content {
     background-color: white;
-    padding: 10px 20px 10px 20px;
     overflow: hidden;
     margin: 0px;
+    width: 100%;
 }
 
 #banner {
     background: transparent url("../img/banner.jpg") no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     border: 10px solid #DDD;
-    margin: 0px 0px 20px 0px;
+    margin: 20px 20px 20px 20px;
     height: 180px;
 
 }
 
+.sidebar_item h5 {
+    margin: 0px 0px 10px 0px;
+}
+
+.sidebar_item h4 {
+    margin: 10px 0px 0px 0px;
+}
+
 #sidebar_container {
     float: left;
-    margin: 0px 50px 0px 0px;
+    margin: 0px 50px 0px 20px;
     width: 220px;
 }
 
@@ -114,11 +122,44 @@ h2 {
     margin-bottom: 10px;
 }
 
+.sidebar_item a {
+    color: #a39094;
+    text-decoration: underline;
+}
+.sidebar_item h3 {
+    margin-bottom: 5px;
+}
+
 #content ul {
     list-style-image: url(../img/bullet.png);
     margin-left: 25px;
 }
-
+#content h2{
+    margin: 20px 0px 20px 0px;
+    position: relative;
+    left:-20px;
+}
+@media screen and (max-width: 640px) {
+    #content h2{
+        left:0px;
+    }
+}
+@media screen and (max-width: 570px) {
+    #menubar{
+        height: 100px;
+    }
+    #header,#logo{
+        height: 180px;
+    }
+}
+@media screen and (max-width: 400px) {
+    #menubar{
+        height: 200px;
+    }
+    #header,#logo{
+        height: 230px;
+    }
+}
 #content h1,
 p {
     margin: 0px 0px 30px 0px;
@@ -130,6 +171,14 @@ p {
 
 #footer {
     clear: both;
+    min-height: 100px;
+}
+#footer p{
+    width: 100%;
+    text-align: center;
+    color:white;
+    margin-top: 50px;
+
 }
 
 .sidebar_item ul {
@@ -137,14 +186,16 @@ p {
     margin-left: 25px;
 }
 
-#content h2{
+#content h2 {
     color: #a39094;
     font-size: large;
 }
+
 .sidebar_item h4 {
     text-transform: uppercase;
     color: #a39094;
 }
-.sidebar_item h5{
+
+.sidebar_item h5 {
     font-size: small;
 }
