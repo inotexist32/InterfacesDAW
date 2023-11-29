@@ -1,0 +1,171 @@
+@font-face {
+    font-family: 'inter';
+    /* Puedes darle el nombre que desees */
+    src: url('../assets/fonts/Inter-VariableFont_slnt\,wght.ttf') format('truetype');
+    /* Otras propiedades de la fuente, como el estilo y el peso, se pueden especificar aquí */
+}
+body{
+    background-color: #112f97;
+}
+.body{
+    background-image:url(../assets/images/wallpaper.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+section{
+    background-image:url(../assets/images/wallpaper.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.photo {
+    background-image:url(../assets/images/photo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: solid rgb(180, 180, 180) 3px;
+    border-radius: 5px;
+    width: 100px;
+    height: 130px;
+}
+
+.title-section {
+    background: linear-gradient(180deg, #6698DA 0%, #2059D5 14.06%, #2365E3 75.52%, #2860D6 87.5%, #0638B7 100%);
+}
+
+.title {
+    border-radius: 2px 7px 10px 2px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.00) 2.5%, rgba(0, 0, 0, 0.00) 75%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(180deg, #90CD88 2.08%, #94C494 10.42%, #59A75C 25.52%, #54B04D 78.12%, #36873B 100%);
+    display: inline-block;
+    padding: 7px;
+
+    color: #FFF;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    font-style: italic;
+}
+.section-skill li{
+    margin-bottom:5px;
+}
+.icon {
+    width:15px;
+    height:15px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.icon-m {
+    width:30px;
+    height:30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.linkedin-icon{
+    background-image:url(../assets/images/linkedin-icon.png);
+}
+.pda-icon{
+    background-image:url(../assets/images/pda-icon.png);
+}
+.letter-icon{
+    background-image:url(../assets/images/letter-icon.png);
+}
+.sysadmin-icon{
+    background-image:url(../assets/images/sysadmin-icon.png);
+}
+.dev-icon{
+    background-image:url(../assets/images/dev-icon.png);
+}
+.books-icon{
+    background-image:url(../assets/images/books-icon.png);
+}
+.section-entry{
+    font-size: 13px;
+    border-right: solid #0638B7 2px;
+}
+.section-time{
+    color: #777777;
+}
+.resize {
+    cursor: n-resize;
+    height: 3px;
+}
+.body-section{
+    transition: 0.2s;
+    background-color: #d3e5f9;
+    /*
+    background-image:url(../assets/images/body-section.png);
+    background-size: 100% 100%;
+    */
+}
+.body-section-entry{
+    color:#0e2657;
+}
+.title-section-entry{
+    text-align: center;
+}
+.header {
+    border-radius: 10px 10px 0px 0px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.00) 2%, rgba(255, 255, 255, 0.00) 97.92%, rgba(0, 0, 0, 0.30) 100%), linear-gradient(180deg, #89B9EA 1.56%, #1666CF 6.77%, #448FEA 100%);
+
+    color: #FFF;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+
+}
+.description{
+    font-size: 13px;
+}
+.contact{
+    font-size: 12px;
+}
+.min-button{
+    background:  linear-gradient(90deg, rgba(255,255,255,0.3)0%, rgba(255,255,255,0)100%),linear-gradient(180deg, #6698DA 0%, #2059D5 14.06%, #2365E3 75.52%, #2860D6 87.5%, #0638B7 100%);
+    border:solid white 2px;
+    border-radius: 5px;
+    color:white;
+    margin: 2px;
+    padding:5px;
+    width: 30px;
+    height:30px;
+}
+.min-bar{
+    transition:100ms;
+    border: solid white 2px;
+    background-color: white;
+    width:10px
+}
+.max-bar{
+    transition:100ms;
+    border: solid white 2px;
+    border-top: solid white 5px;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+}
+.year{
+    background-color: white;
+    padding-bottom: 0px;
+    border-right: solid #a6bad6 1px;
+    border-left: solid #0638B7 2px;
+}
+@media screen and (max-width: 320) {
+    .contact{
+        font-size: 8px;
+    }
+}
+@media screen and (min-width: 321) {
+    .contact{
+        font-size: 12px;
+    }
+}

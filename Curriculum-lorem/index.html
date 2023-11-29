@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Curriculum Vitae</title>
+</head>
+
+<body>
+    <header class="">
+        <div class="header">
+            <div class="d-flex">
+                <div class="photo-container m-3">
+                    <div class="photo"></div>
+                </div>
+                <div class="personal-data p-3">
+                    <div class="name">
+                        <p>Gabriel Flores Rosales</p>
+                    </div>
+                    <div class="description">
+                        <p>Estudiante en I.E.S. Jardín</p>
+                    </div>
+                    <div class="contact d-none d-md-block">
+                        <div class="contact-entry d-flex">
+                            <div class="icon linkedin-icon me-1"></div>
+                            <div class="contact-text">Mi linkedin</div>
+                        </div>
+                        <div class="contact-entry d-flex">
+                            <div class="icon pda-icon me1"></div>
+                            <div class="contact-text">666 777 888</div>
+                        </div>
+                        <div class="contact-entry d-flex">
+                            <div class="icon letter-icon me-1"></div>
+                            <div class="contact-text">sunflower@hotmail.com</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact d-md-none d-sm-block pt-2 ps-4 pb-2">
+                <div class="contact-entry d-flex">
+                    <div class="icon linkedin-icon me-1"></div>
+                    <div class="contact-text">Mi linkedin</div>
+                </div>
+                <div class="contact-entry d-flex">
+                    <div class="icon pda-icon me1"></div>
+                    <div class="contact-text">666 777 888</div>
+                </div>
+                <div class="contact-entry d-flex">
+                    <div class="icon letter-icon me-1"></div>
+                    <div class="contact-text">sunflower@hotmail.com</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <content class="body">
+        <section class="formacion">
+            <div class="title-section d-flex justify-content-between align-content-between">
+                <div class="title">
+                    Formación
+                </div>
+                <div onclick="switchMin('formacion')" class="min-button d-flex flex-column-reverse"
+                    id="formacion-min-button">
+                    <div class="min-bar"></div>
+                </div>
+            </div>
+            <div class="body-section container">
+                <div class="section-entry row">
+                    <div class="title-section-entry pt-3 col-2 year"></div>
+                    <div class="col-10 row pt-3 mb-2">
+                        <div class="icon-m books-icon col-2 ms-1"></div>
+                        <div class="body-section-entry col-10">
+                            <div class="section-description mb-2">
+                                <b>Educación secundaria</b><br />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-entry row">
+                    <div class="title-section-entry pt-3 col-2 year">2019</div>
+                    <div class="col-10 row pt-3">
+                        <div class="icon-m books-icon col-2 ms-1"></div>
+                        <div class="body-section-entry col-10">
+                            <div class="section-description mb-2">
+                                <b>Grado medio en Jardinería</b>
+                                en I.E.S. Jardín<br />
+                                (2 años)
+                            </div>
+                            <div class="section-skill container ms-2">
+                                <div class="row">
+                                    <ul class="section-skill col">
+                                        <li>Regar</li>
+                                        <li>Podar</li>
+                                        <li>Polinización</li>
+                                        <li>Botánica</li>
+                                        <li>Floristería</li>
+                                    </ul>
+                                    <ul class="section-skill col">
+                                        <li>Control de plagas</li>
+                                        <li>Horticultura</li>
+                                        <li>Paisajismo</li>
+                                        <li>Nutrientes</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="section-time pb-3">
+                                De diciembre de 2019 a junio de 2021
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-entry row">
+                    <div class="title-section-entry pt-3 col-2 year">2021</div>
+                    <div class="col-10 row pt-3">
+                        <div class="icon-m books-icon col-2 ms-1"></div>
+                        <div class="body-section-entry col-10">
+                            <div class="section-description mb-2">
+                                <b>Grado superior en Herbología</b>
+                                en I.E.S. Jardín<br />
+                                (2 años)
+                            </div>
+                            <div class="section-skill container ms-2">
+                                <div class="row">
+                                    <ul class="section-skill col">
+                                        <li>Identificación de Plantas</li>
+                                        <li>Propiedades Medicinales</li>
+                                        <li>Cosecha y Preparación</li>
+                                        <li>Cultivo de Hierbas</li>
+                                        <li>Combinación de Hierbas</li>
+                                    </ul>
+                                    <ul class="section-skill col">
+                                        <li>Conocimiento Botánico</li>
+                                        <li>Uso Culinario</li>
+                                        <li>Creación de Tinturas</li>
+                                        <li>Fitoterapia</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="section-time pb-3">
+                                De septiembre de 2021 a junio de 2023
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="experiencia">
+            <div class="title-section d-flex justify-content-between align-content-between">
+                <div class="title">
+                    Experiencia
+                </div>
+                <div onclick="switchMin('experiencia')" class="min-button d-flex flex-column-reverse"
+                    id="formacion-min-button">
+                    <div class="min-bar"></div>
+                </div>
+            </div>
+            <div class="body-section container">
+                <div class="section-entry row">
+                    <div class="title-section-entry pt-3 col-2 year">2021</div>
+                    <div class="col-10 row pt-3">
+                        <div class="icon-m sysadmin-icon col-2 ms-1"></div>
+                        <div class="body-section-entry col-10">
+                            <div class="section-description mb-2">
+                                <b>Administrador de Jardines</b>
+                                en Oasis Botánico VerdeVista.<br />
+                                Practicas en cuidado de jardines. (3 meses)
+                            </div>
+                            <div class="section-skill container ms-2">
+                                <div class="row">
+                                    <ul class="section-skill col">
+                                        <li>Regar</li>
+                                        <li>Podar</li>
+                                        <li>Polinización</li>
+                                        <li>Botánica</li>
+                                        <li>Floristería</li>
+                                    </ul>
+                                    <ul class="section-skill col">
+                                        <li>Control de plagas</li>
+                                        <li>Horticultura</li>
+                                        <li>Paisajismo</li>
+                                        <li>Nutrientes</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="section-time pb-3">
+                                De abril de 2021 a junio de 2021
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-entry row">
+                    <div class="title-section-entry pt-3 col-2 year">2022</div>
+                    <div class="col-10 row pt-3">
+                        <div class="icon-m dev-icon col-2 ms-1"></div>
+                        <div class="body-section-entry col-10">
+                            <div class="section-description mb-2">
+                                <b>Técnico en Herboristería</b>
+                                en SerenBotánico.<br />
+                                Practicas en herboristería. (2 meses)
+                            </div>
+                            <div class="section-skill container ms-2">
+                                <div class="row">
+                                    <ul class="section-skill col">
+                                        <li>Identificación de Plantas</li>
+                                        <li>Propiedades Medicinales</li>
+                                        <li>Cosecha y Preparación</li>
+                                        <li>Cultivo de Hierbas</li>
+                                        <li>Combinación de Hierbas</li>
+                                    </ul>
+                                    <ul class="section-skill col">
+                                        <li>Conocimiento Botánico</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="section-time pb-3">
+                                De mayo de 2022 a junio de 2022
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </content>
+    <footer></footer>
+</body>
+<script src="scripts/script.js"></script>
+
+</html>
