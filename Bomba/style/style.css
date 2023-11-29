@@ -8,6 +8,7 @@ body {}
     position: absolute;
     top: 0px;
     left: 0px;
+    animation: change-background 5s infinite ease-in;
 }
 
 .bomb {
@@ -77,6 +78,27 @@ body {}
         transform: rotateZ(0deg);
         top: 55%;
         transform: scaleX(15) scaleY(3);
+    }
+
+
+}
+
+@keyframes change-background {
+
+    0% {
+        background-image: url(../assets/img/background.jpg);
+    }
+
+    50% {
+        background-image: url(../assets/img/background.jpg);
+    }
+
+    80% {
+        background-image: url(../assets/img/background-after.jpg);
+    }
+
+    100% {
+        background-image: url(../assets/img/background-after.jpg);
     }
 
 
