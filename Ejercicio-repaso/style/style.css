@@ -1,0 +1,150 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    color: #FFF #555;
+    background-color: #000;
+}
+
+
+h1,
+h2,
+h3 {
+    font-family: 'century gothic' #000;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 100;
+    margin-bottom: 5px;
+    letter-spacing: 3px;
+}
+
+h2 {
+    font-size: medium;
+    font-weight: 100;
+}
+
+#header {
+    color: #000;
+    background-color: #1d1d1d;
+    margin: 0px 20px 0px 20px;
+}
+
+#header a {
+    color: white;
+}
+
+#header h2 {
+    color: #b48a7c;
+}
+
+#logo {
+    height: 120px;
+    padding: 0px 10px 0px 10px;
+    border-bottom: 1px solid #3d3d3d;
+}
+
+#menubar {
+    background-color: #2d2d2d;
+    clear: both;
+    width: 100%;
+    height: 40px;
+}
+
+#menu {
+    margin-right: 0px;
+    float: right;
+}
+
+#menu li {
+    padding: 2px 15px 10px 15px;
+    float: left;
+    background-color: #614134;
+    list-style-type: none;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#menu li a {
+    color: white;
+}
+
+#menu li:hover {
+    background-color: #888;
+}
+
+#menu li.selected {
+    background-color: #b48a7c;
+}
+
+#site_content {
+    background-color: white;
+    padding: 10px 20px 10px 20px;
+    overflow: hidden;
+    margin: 0px;
+}
+
+#banner {
+    background: transparent url("../img/banner.jpg") no-repeat;
+    background-size: cover;
+    border: 10px solid #DDD;
+    margin: 0px 0px 20px 0px;
+    height: 180px;
+
+}
+
+#sidebar_container {
+    float: left;
+    margin: 0px 50px 0px 0px;
+    width: 220px;
+}
+
+.sidebar_item {
+    border: solid #e6e6e6 1px;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#content ul {
+    list-style-image: url(../img/bullet.png);
+    margin-left: 25px;
+}
+
+#content h1,
+p {
+    margin: 0px 0px 30px 0px;
+}
+
+#content_footer {
+    clear: both;
+}
+
+#footer {
+    clear: both;
+}
+
+.sidebar_item ul {
+    list-style-image: url(../img/bullet.png);
+    margin-left: 25px;
+}
+
+#content h2{
+    color: #a39094;
+    font-size: large;
+}
+.sidebar_item h4 {
+    text-transform: uppercase;
+    color: #a39094;
+}
+.sidebar_item h5{
+    font-size: small;
+}
