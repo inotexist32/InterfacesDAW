@@ -1,0 +1,70 @@
+.progress-bar {
+    height: 20px;
+    width: 150px;
+    position:relative;
+    margin:0px 10px 0px 10px;
+}
+
+.progres-bar-component {
+    background-size: 100% 100%;
+    width: 10px;
+    height: 18px;
+    position: absolute;
+}
+
+.progress-bar-left-frame {
+    background-image: url(../assets/img/controls/progress-bar-left-frame.png);
+    top: 0px;
+    left: -5px;
+}
+
+.progress-bar-right-frame {
+    background-image: url(../assets/img/controls/progress-bar-right-frame.png);
+    top: 0px;
+    right: -5px;
+}
+
+.progress-bar-body {
+    background-image: url(../assets/img/controls/progress-bar-body.png);
+    width: 100%;
+}
+
+.progress-bar-bar-frame {
+    right: -2px;
+    width: 5px;
+}
+
+.progress-bar-bar-body {
+    width:100%;
+    transition: opacity 1s linear, width 1s linear;
+}
+.progress-bar-bar-body-green {
+    background-image: url(../assets/img/controls/progress-bar-bar-body-green.png);
+}
+
+.progress-bar-bar-frame-green {
+    background-image: url(../assets/img/controls/progress-bar-bar-frame-green.png);
+}
+
+.progress-bar-bar-body-red {
+    background-image: url(../assets/img/controls/progress-bar-bar-body-red.png);
+}
+
+.progress-bar-bar-body-blue {
+    background-image: url(../assets/img/controls/progress-bar-bar-body-blue.png);
+}
+
+.progress-bar-bar-frame-red {
+    background-image: url(../assets/img/controls/progress-bar-bar-frame-red.png);
+}
+
+.progress-bar-bar-body-yellow {
+    background-image: url(../assets/img/controls/progress-bar-bar-body-yellow.png);
+}
+
+.progress-bar-bar-frame-yellow {
+    background-image: url(../assets/img/controls/progress-bar-bar-frame-yellow.png);
+}
+.progress-bar-bar-frame-blue {
+    background-image: url(../assets/img/controls/progress-bar-bar-frame-blue.png);
+}

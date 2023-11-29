@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/controls.css">
+    <link rel="stylesheet" href="style/workshop.css">
+    <link rel="stylesheet" href="style/complement.css">
+    <title>Document</title>
+    <script src="script/controls-p-bars.js"></script>
+    <script src="script/controls-e-button.js"></script>
+    <script src="script/controls.js"></script>
+    <script src="script/script.js"></script>
+    <script src="script/text-script.js"></script>
+    <script src="script/persistent-script.js"></script>
+    <script src="script/control-ship-script.js"></script>
+    <script src="script/multimedia-script.js"></script>
+    <script src="script/trade-script.js"></script>
+    <script src="script/interface-script.js"></script>
+    <script src="script/celestial-bodies-script.js"></script>
+    <!--<script src="script/aventura-script.js"></script>-->
+    <script src="script/controls-digi-panel-title.js"></script>
+    <script src="script/controls-digi-panel.js"></script>
+    <script src="script/workshop-script.js"></script>
+    <script src="script/enemy-script.js"></script>
+</head>
+
+<body class="galaxy-map">
+    <multimedia>
+        <audio id="background-audio" loop>
+            <source src="assets/sound/music/space.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="background-audio2" loop>
+            <source src="assets/sound/music/Space_oddity.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="click-sound">
+            <source src="assets/sound/effects/click2.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="typing-sound">
+            <source src="assets/sound/effects/writting.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="slide-sound">
+            <source src="assets/sound/effects/slide.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="ship-out-sound">
+            <source src="assets/sound/effects/ship-out.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="ship-in-sound">
+            <source src="assets/sound/effects/ship-in.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="warp-sound">
+            <source src="assets/sound/effects/long-warp.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="get-item-sound">
+            <source src="assets/sound/effects/get-item.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="blaster-sound">
+            <source src="assets/sound/effects/blaster.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="missile-sound">
+            <source src="assets/sound/effects/missile.mp3" type="audio/mpeg">
+        </audio>
+    </multimedia>
+    <div class="game-container">
+        <!-- Pantalla Principal -->
+        <div class="nav-bar">
+            <div class="nav-bar-input-group">
+                <e-button text="Mapa de la galaxia" onclick="openGalaxyMap()"></e-button>
+                <e-button text="Mapa de planetario" onclick="openSystemMap()"></e-button>
+                <e-button text="Taller" onclick="openWorkshop()"></e-button>
+                <div class="nav-bar-input-group-border-right"></div>
+            </div>
+            <div></div>
+        </div>
+        <div class="control-bar-meter-group">
+            <div class="panel-bars"></div>
+            <div class="panel-corner panel-corner-tl"></div>
+            <div class="panel-corner panel-corner-tr"></div>
+            <div class="panel-corner panel-corner-bl"></div>
+            <div class="panel-corner panel-corner-br"></div>
+            <div class="panel-frame-bar panel-frame-bar-top-left"></div>
+            <div class="panel-frame-bar panel-frame-bar-top-right"></div>
+            <div class="panel-frame-bar panel-frame-bar-bottom-left"></div>
+            <div class="panel-frame-bar panel-frame-bar-bottom-right"></div>
+            <div class="panel-frame-bar panel-frame-bar-left-bottom"></div>
+            <div class="panel-frame-bar panel-frame-bar-left-top"></div>
+            <div class="panel-frame-bar panel-frame-bar-right-bottom"></div>
+            <div class="panel-frame-bar panel-frame-bar-right-top"></div>
+            <div class="control-bar-resources">
+                <div class="control-bar-resources-resource control-bar-resources-resource-fe">
+                    <div class="control-bar-resources-resource-name">Hierro</div>
+                    <div class="control-bar-resources-resource-logo workshop-ship-section-cost-logo-fe"></div>
+                    <div class="control-bar-resources-resource-amount">100</div>
+                </div>
+                <div class="control-bar-resources-resource control-bar-resources-resource-al">
+                    <div class="control-bar-resources-resource-name">Aluminio</div>
+                    <div class="control-bar-resources-resource-logo workshop-ship-section-cost-logo-al"></div>
+                    <div class="control-bar-resources-resource-amount">50</div>
+                </div>
+                <div class="control-bar-resources-resource control-bar-resources-resource-si">
+                    <div class="control-bar-resources-resource-name">Silicio</div>
+                    <div class="control-bar-resources-resource-logo workshop-ship-section-cost-logo-si"></div>
+                    <div class="control-bar-resources-resource-amount">50</div>
+                </div>
+                <div class="control-bar-resources-resource control-bar-resources-resource-graphen">
+                    <div class="control-bar-resources-resource-name">Grafeno</div>
+                    <div class="control-bar-resources-resource-logo workshop-ship-section-cost-logo-graphen"></div>
+                    <div class="control-bar-resources-resource-amount">111</div>
+                </div>
+                <div class="control-bar-resources-resource control-bar-resources-resource-scrap">
+                    <div class="control-bar-resources-resource-name">Chatarra</div>
+                    <div class="control-bar-resources-resource-logo workshop-ship-section-cost-logo-scrap"></div>
+                    <div class="control-bar-resources-resource-amount">55</div>
+                </div>
+            </div>
+            <div class="control-bar-meter">
+                <label>Supervivientes:</label>
+                <div class="control-bar-meter-values">
+                    <div id="survivors-level-number" style="opacity: 0;"></div>
+                    <p-bar id="survivor-meter" value="50"></p-bar>
+                </div>
+            </div>
+            <div class="control-bar-meter">
+                <label>Energía:</label>
+                <div class="control-bar-meter-values">
+                    <div id="energy-level-number" style="opacity: 0;"></div>
+                    <p-bar id="energy-meter" value="50"></p-bar>
+                </div>
+            </div>
+            <div class="control-bar-meter">
+                <label>Integridad del casco:</label>
+                <div class="control-bar-meter-values">
+                    <div id="hull-level-number" style="opacity: 0;"></div>
+                    <p-bar id="damage-meter" value="25"></p-bar>
+                </div>
+            </div>
+            <div class="control-bar-meter">
+                <label>Enfr. de salto:</label>
+                <p-bar id="jump-progress" color-f="red" color-m="blue" color-e="blue" value="75"></p-bar>
+            </div>
+            <div class="control-bar-meter">
+                <label>Tiempo hasta el próximo escaneo Cylon:</label>
+                <input type="time" id="countdown" class="digital-countdown" name="eta" readonly>
+            </div>
+        </div>
+        <form id="main-screen-form">
+            <div></div>
+            <div class="control-bar-input-group">
+                <div class="control-bar-input-group-border-left"></div>
+                <e-button text="Escudos" onclick="mostrarEscudoInterface()"></e-button>
+                <e-button text="Propulsor" onclick="mostrarPropulsorInterface()"></e-button>
+                <e-button text="Armas" onclick="mostrarArmaInterface()"></e-button>
+                <e-button text="Motor de Salto" onclick="mostrarMotorSaltoInterface()"></e-button>
+
+                <div class="emergency-button">
+                    <div class="btn emergency-button" onclick="emergencyJump()">
+                        <div class="emergency-button-piece emergency-button-piece-left"></div>
+                        <div class="emergency-button-piece emergency-button-piece-center-left"></div>
+                        <div class="emergency-button-piece emergency-button-piece-center-right"></div>
+                        <div class="emergency-button-piece emergency-button-piece-right"></div>
+                        <div class="emergency-button-text">
+                            SALTO DE<br>EMERGENCIA
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <!-- Interfaz del Escudo -->
+        <digi-panel title="Interfaz de Escudos" close-action="ocultarTodasLasInterfaces()" class="right-panel"
+            id="shield-interface">
+            <div class="frame">
+                <div class="shield-map">
+                    <div class="shield-map-holographic-ship">
+                        <div class="shield-map-malla">
+
+                        </div>
+                    </div>
+                    <div class="shield-map-selector"></div>
+                </div>
+
+                <div class="panel-control">
+                    <label>Energía:</label>
+                    <p-bar id="energy-meter1" value="50"></p-bar>
+                </div>
+
+                <div class="panel-control">
+                    <label for="proa-shield">Proa:</label>
+                    <p-bar id="proa-shield" value="25" color="blue"></p-bar>
+                </div>
+
+                <div class="panel-control">
+                    <label for="popa-shield">Popa:</label>
+                    <p-bar id="popa-shield" value="25" color="blue"></p-bar>
+                </div>
+
+                <div class="panel-control">
+                    <label for="babor-shield">Babor:</label>
+                    <p-bar id="babor-shield" value="25" color="blue"></p-bar>
+                </div>
+
+                <div class="panel-control">
+                    <label for="estribor-shield">Estribor:</label>
+                    <p-bar id="estribor-shield" value="25" color="blue"></p-bar>
+                </div>
+
+                <div class="panel-control">
+                    <e-button text="Igualar todos" onclick="equalizeShields()"></e-button>
+                </div>
+            </div>
+        </digi-panel>
+
+        <!-- Interfaz del Propulsor -->
+        <digi-panel title="Interfaz del Propulsor" close-action="ocultarTodasLasInterfaces()" class="right-panel"
+            id="propulsor-interface">
+            <div class="frame">
+
+                <div class="panel-control">
+                    <label>Energía:</label>
+                    <p-bar id="energy-meter2" value="50"></p-bar>
+                </div>
+
+                <div class="panel-control">
+                    <label for="speed-slider">Velocidad:</label>
+                    <input type="range" id="speed-slider" min="0" max="1000" onchange="setThrusterSpeed(this.value)"
+                        value="0">
+                    <e-button text="+100 km/h" onclick="upSpeed()"></e-button>
+                    <e-button text="-100 km/h" onclick="downSpeed()"></e-button>
+                </div>
+                <div class="panel-control">
+                    <label for="direction-slider">Dirección:</label>
+                    <input type="range" id="direction-slider" min="0" max="100">
+                    <e-button onclick="centerHelm()" text="Centrar"></e-button>
+                </div>
+            </div>
+        </digi-panel>
+
+        <!-- Interfaz del Arma -->
+        <digi-panel title="Interfaz de Armas" close-action="ocultarTodasLasInterfaces()" class="right-panel"
+            id="arma-interface">
+
+            <div class="frame">
+
+
+                <div class="panel-control">
+                    <label>Energía:</label>
+                    <p-bar id="energy-meter3" value="50"></p-bar>
+                </div>
+                <div class="panel-control">
+                    <label for="weapon1">Láseres</label>
+                    <input type="radio" id="weapon1" name="weapon" checked>
+                </div>
+                <div class="panel-control">
+                    <label for="weapon2">Misiles Nucleares</label>
+                    <input type="radio" id="weapon2" name="weapon">
+                </div>
+                <div id="count-missiles"></div>
+                <meter id="ammunition-meter" min="0" max="100" value="50"></meter><br>
+                <button type="button" id="shoot-button" onclick="shoot()">Disparar</button>
+                <button type="button" onclick="reload()">Recargar</button><br>
+                <button type="button" onclick="changeWeapon()">Cambiar Arma</button>
+            </div>
+        </digi-panel>
+
+        <!-- Interfaz del Motor de Salto -->
+        <digi-panel title="Interfaz del Motor de Salto" close-action="ocultarTodasLasInterfaces()" class="right-panel"
+            id="motor-salto-interface">
+
+            <div class="frame">
+                <div class="panel-control">
+                    <label for="proa-shield">Refrigerar motor:</label>
+                    <div id="warp-cooler-level-number">0</div>
+                    <input type="range" id="warp-cooler-level" min="0" max="10" value="0" onchange="changeWarpCooler()">
+                </div>
+            </div>
+        </digi-panel>
+    </div>
+    <div class="star-system-map">
+    </div>
+    <div class="galaxy-map">
+    </div>
+    <div class="dialog">
+        <digi-panel title="Intercomunicador Holográfico" class="dialog-box" size="large">
+            <p class="hidden-text" hidden></p>
+            <p class="public-text"></p>
+            <div class="dialog-input-block" id="dialog-input-block">
+            </div>
+            <div class="dialog-bottom-controls">
+                <p class="dialog-shut-up-button" hidden onclick="skipDialog()">
+                    Ya vale de tanta chapa
+                </p>
+                <p class="dialog-fast-button" hidden onclick="showAllDialog()">&gt;&gt;
+                </p>
+                <p class="dialog-continue-button" hidden onclick="continueDialog()">
+                    Continuar
+                </p>
+            </div>
+        </digi-panel>
+    </div>
+    <div class="shop">
+        <div class="shop-box">
+            <div class="panel-bars"></div>
+            <div class="panel-corner panel-corner-tl"></div>
+            <div class="panel-corner panel-corner-tr"></div>
+            <div class="panel-corner panel-corner-bl"></div>
+            <div class="panel-corner panel-corner-br"></div>
+            <div class="panel-frame-bar panel-frame-bar-top-left"></div>
+            <div class="panel-frame-bar panel-frame-bar-top-right"></div>
+            <div class="panel-frame-bar panel-frame-bar-bottom-left"></div>
+            <div class="panel-frame-bar panel-frame-bar-bottom-right"></div>
+            <div class="panel-frame-bar panel-frame-bar-left-bottom"></div>
+            <div class="panel-frame-bar panel-frame-bar-left-top"></div>
+            <div class="panel-frame-bar panel-frame-bar-right-bottom"></div>
+            <div class="panel-frame-bar panel-frame-bar-right-top"></div>
+            <div class="dialog-input-block" id="dialog-input-block">
+            </div>
+            <div class="dialog-bottom-controls">
+                <p class="dialog-continue-button" hidden onclick="continueDialog()">
+                    Continuar
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="ship-shop">
+        <div class="ship-shop-box">
+            <div class="title-box title-box-big-screen ">
+                <div class="title-box-piece title-box-piece-left"></div>
+                <div class="title-box-piece title-box-piece-center-left"></div>
+                <div class="title-box-piece title-box-piece-center-right"></div>
+                <div class="title-box-piece title-box-piece-right"></div>
+                <p class="title-box-text">Salescrap</p>
+            </div>
+            <div class="panel-bars"></div>
+            <div class="panel-corner panel-corner-tl"></div>
+            <div class="panel-corner panel-corner-tr"></div>
+            <div class="panel-corner panel-corner-bl"></div>
+            <div class="panel-corner panel-corner-br"></div>
+            <div class="panel-frame-bar panel-frame-bar-top-left"></div>
+            <div class="panel-frame-bar panel-frame-bar-top-right"></div>
+            <div class="panel-frame-bar panel-frame-bar-bottom-left"></div>
+            <div class="panel-frame-bar panel-frame-bar-bottom-right"></div>
+            <div class="panel-frame-bar panel-frame-bar-left-bottom"></div>
+            <div class="panel-frame-bar panel-frame-bar-left-top"></div>
+            <div class="panel-frame-bar panel-frame-bar-right-bottom"></div>
+            <div class="panel-frame-bar panel-frame-bar-right-top"></div>
+            <div class="ship-shop-prev-button" onclick="prevShip()">&lt;</div>
+            <div class="ship-shop-next-button" onclick="nextShip()">&gt;</div>
+            <div class="ship-shop-container">
+                <div class="ship-carrousel">
+                </div>
+                <div class="ship-shop-info">
+                    <div class="ship-shop-ship-spects">
+                        <div class="ship-shop-spect ship-shop-name-spects">
+                            <label></label>
+                            <div id="ship-shop-model-text"></div>
+                        </div>
+                        <div class="ship-shop-spect ship-shop-weapons-spects">
+                            <label></label>
+                            <meter id="ship-shop-weapons-meter" min="0" max="100" value="50"></meter>
+                        </div>
+                        <div class="ship-shop-spect ship-shop-warp-engine-spect">
+                            <label></label>
+                            <meter id="ship-shop-shields-meter" min="0" max="100" value="50"></meter>
+                        </div>
+                        <div class="ship-shop-spect ship-shop-warp-engine-spect">
+                            <label></label>
+                            <meter id="ship-shop-warp-engine-meter" min="0" max="100" value="50"></meter>
+                        </div>
+                        <div class="ship-shop-spect ship-shop-mining-tools-spect">
+                            <label></label>
+                            <meter id="ship-shop-mining-tools-meter" min="0" max="100" value="50"></meter>
+                        </div>
+                        <div class="ship-shop-spect ship-shop-price-spect">
+                            <label></label>
+                            <div id="ship-shop-price-text"></div>
+                        </div>
+                    </div>
+                    <div class="ship-shop-ship-description" id="ship-shop-ship-description">
+                    </div>
+                </div>
+
+                <div class="ship-shop-action-buttons">
+                    <input type="button" value="Comprar" onclick="buyShipInShop()">
+                    <input type="button" value="Salir" onclick="closeShipShop()">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="holo-panel">
+        <div class="panel-bars"></div>
+        <div class="holo-panel-base holo-panel-base-top"></div>
+        <div class="holo-panel-base holo-panel-base-mid-top"></div>
+        <div class="holo-panel-base holo-panel-base-mid-bottom"></div>
+        <div class="holo-panel-base holo-panel-base-center"></div>
+        <div class="holo-panel-base holo-panel-base-bottom"></div>
+        <div class="holo-panel-ext-container"><!-- onclick="showDialog()">-->
+            <div class="holo-panel-ext holo-panel-ext-top"></div>
+            <div class="holo-panel-ext holo-panel-ext-mid-top"></div>
+            <div class="holo-panel-ext holo-panel-ext-mid-bottom"></div>
+            <div class="holo-panel-ext holo-panel-ext-bottom"></div>
+        </div>
+        <div class="holo-panel-content">
+            <div id="holophone-face" class="holophone-face">
+                <div class="video-glitch"></div>
+            </div>
+        </div>
+    </div>
+    <div class="battle-panel" style="display: none;">
+        <div class="battle-panel-main-ship" style="transform:rotateZ(0deg) translateY(0px)">
+            <div class="battle-panel-shield battle-panel-main-ship-shield">
+            </div>
+            <div class="thruster-fire"></div>
+        </div>
+        <!--
+        <div class="battle-panel-enemy-ship" style="left:45%;top:40%">
+            <div class="battle-panel-shield battle-panel-enemy-ship-shield"></div>
+        </div>
+        -->
+    </div>
+    <div class="workshop-panel">
+        <digi-panel title="Taller de mejoras" id="taller-mejoras" class="workshop-box" size="large"
+            close-action="closeWorkshop()">
+            <div id="workshop-upgrades"></div>
+        </digi-panel>
+    </div>
+    <div id="cinematic"></div>
+
+    <div class="start-game" style="display:none">
+        <h1 onclick="startGame()">INICIAR AVENTURA</h1>
+    </div>
+    <script>
+    </script>
+</body>
+
+</html>

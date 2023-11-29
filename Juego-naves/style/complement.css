@@ -1,0 +1,5 @@
+.control-bar-meter-values:hover #survivors-level-number,
+.control-bar-meter-values:hover #energy-level-number,
+.control-bar-meter-values:hover #hull-level-number {
+    opacity: 1 !important;
+}

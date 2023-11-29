@@ -1,0 +1,119 @@
+
+.workshop-panel {
+    top: 0px;
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: background 1s;
+}
+
+.workshop-box {
+    position: relative;
+    width: 70%;
+    height: 50%;
+    background-color: var(--background-screen-transparent);
+    color: white;
+    font-size: 23px;
+    text-shadow: 5px 5px 5px rgb(0, 0, 0);
+
+}
+.workshop-ship-section{
+    border: solid var(--text-screen-color) 1px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+
+}
+.workshop-ship-section-description{
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    border-radius: 5px;
+    width:50%;
+}
+.workshop-ship-section-logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 10%;
+}
+.workshop-ship-section-logo-name{
+    text-align: center;
+}
+.workshop-ship-section-logo-img{
+    width: 70px;
+    height: 70px;
+    background-size: 100% 100%;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0,0.5);
+}
+.workshop-ship-section-logo-img-shields{
+    background-image: url(../assets/img/upgrades/shield-upgrade.png);
+}
+.workshop-ship-section-logo-img-stealth{
+    background-image: url(../assets/img/upgrades/stealth-upgrade.png);
+}
+.workshop-ship-section-logo-img-hull{
+    background-image: url(../assets/img/upgrades/hull-upgrade.png);
+}
+.workshop-ship-section-logo-img-missile{
+    background-image: url(../assets/img/upgrades/missile-upgrade.png);
+}
+.workshop-ship-section-logo-img-energy{
+    background-image: url(../assets/img/upgrades/energy-upgrade.png);
+}
+.workshop-ship-section-logo-img-dependencias{
+    background-image: url(../assets/img/upgrades/dependencias.jpg);
+}
+.workshop-ship-section-logo-img-laser{
+    background-image: url(../assets/img/upgrades/laser.jpg);
+}
+.workshop-ship-section-cost{
+    display: flex;
+    flex-direction: row;
+}
+.workshop-ship-section-cost-logo{
+    width: 50px;
+    height: 50px;
+    background-size: 100% 100%;
+}
+.workshop-ship-section-cost-logo-fe{
+    background-image: url(../assets/img/resources/iron.webp);
+}
+.workshop-ship-section-cost-logo-al{
+    background-image: url(../assets/img/resources/aluminio.webp);
+}
+.workshop-ship-section-cost-logo-si{
+    background-image: url(../assets/img/resources/silicio.webp);
+}
+.workshop-ship-section-cost-logo-graphen{
+    background-image: url(../assets/img/resources/graphen.webp);
+}
+.workshop-ship-section-cost-logo-scrap{
+    background-image: url(../assets/img/resources/scrap.webp);
+}
+.workshop-ship-section-cost-resource{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 10px 0px 10px ;
+}
+.workshop-ship-section-apply{
+    margin-left: 20px;
+    cursor: pointer;
+}
+.resource-red{
+    color: rgb(252, 46, 46);
+    font-weight: bolder;
+}
+#workshop-upgrades{
+    overflow-y: scroll;
+    position:absolute;
+    top:50px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+}
